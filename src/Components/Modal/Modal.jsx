@@ -32,12 +32,11 @@ const Modal = () => {
 
     return (
         <>
-            <h3 className='text-4xl pb-4 mt-12'>Modal</h3>
             <p className='text-[#0008] font-medium pb-4'>A modal is a pop-up window that overlays the current page for focused interactions.</p>
 
             <div className='flex gap-4 p-2'>
-                <p className='cursor-pointer' onClick={() => handlePreview("modalPriview1")}>Preview</p>
-                <p className='cursor-pointer' onClick={() => handlePreview("modalJsx1")}>JSX</p>
+                <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("modalPriview1")}>Preview</p>
+                <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("modalJsx1")}>React</p>
             </div>
 
             <div className={`flex flex-col gap-2 border border-stone-300 rounded-2xl ${activePreview === "modalPriview1" ? 'block' : 'hidden'}`}>

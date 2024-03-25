@@ -12,6 +12,7 @@ export default {
         'lg': '1024px',
         'xl': '1400px',
         'xxl': '1900px',
+        'xxxl': '2200px'
       },
       container: {
         center: true,

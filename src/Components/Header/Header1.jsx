@@ -1,4 +1,5 @@
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 
 const Header1 = () => {
@@ -20,7 +21,7 @@ const Header1 = () => {
                 </div>
 
 
-                <img className="h-[4rem]" src="./ahsui.png" alt="" />
+                <Link to={'/'}><img className="h-[4rem]" src="./ahsui.png" alt="" /></Link>
 
 
             </div>
@@ -40,7 +41,7 @@ const Header1 = () => {
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal px-1 text-[#FFFFFF]">
-                    <li><a className="font-medium text-base">Components</a></li>
+                    <li><Link to={'/components'} className="font-medium text-base">Components</Link></li>
                     <li><a className="font-medium text-base">Premium</a></li>
                 </ul>
             </div>
