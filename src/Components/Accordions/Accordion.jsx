@@ -17,7 +17,7 @@ const Accordion = () => {
 
     return (
         <>
-            <h3 className='text-4xl pb-4'>Accordion</h3>
+            <h3 className='text-4xl font-bold pb-4'>Accordion</h3>
             <p className='text-[#0008] font-medium pb-4'>Accordion components facilitate displaying and concealing content, ensuring that only one item remains open at any given moment.</p>
 
             <div className='flex gap-4 p-2'>

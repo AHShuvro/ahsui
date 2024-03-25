@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Accordion from '../Accordions/Accordion';
 import SwapPage from '../../Page/SwapPage';
 import ModalPage from '../../Page/ModalPage';
+import ButtonPage from '../../Page/ButtonPage';
 
 function Home1() {
   const [currentPage, setCurrentPage] = useState('accordion');
@@ -14,6 +15,8 @@ function Home1() {
         return <ModalPage />;
       case 'swap':
         return <SwapPage />;
+      case 'button':
+        return <ButtonPage />;
       default:
         return null;
     }
@@ -32,6 +35,8 @@ function Home1() {
             <li onClick={() => setCurrentPage('modal')} className='text-[1rem] font-semibold py-1 px-4 hover:text-[#EF1E7E] hover:bg-[#ef1e7f1a] focus:text-white focus:bg-[#EF1E7E] rounded-2xl list-none cursor-pointer' tabIndex="0">Modal</li>
 
             <li onClick={() => setCurrentPage('swap')} className='text-[1rem] font-semibold py-1 px-4 hover:text-[#EF1E7E] hover:bg-[#ef1e7f1a] focus:text-white focus:bg-[#EF1E7E] rounded-2xl list-none cursor-pointer' tabIndex="0">Swap</li>
+
+            <li onClick={() => setCurrentPage('button')} className='text-[1rem] font-semibold py-1 px-4 hover:text-[#EF1E7E] hover:bg-[#ef1e7f1a] focus:text-white focus:bg-[#EF1E7E] rounded-2xl list-none cursor-pointer' tabIndex="0">Button</li>
 
           </div>
         </div>

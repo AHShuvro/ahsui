@@ -32,7 +32,7 @@ const Modal = () => {
 
     return (
         <>
-            <p className='text-[#0008] font-medium pb-4'>A modal is a pop-up window that overlays the current page for focused interactions.</p>
+            <p className='text-[#000] font-bold pb-2'>Responsive</p>
 
             <div className='flex gap-4 p-2'>
                 <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("modalPriview1")}>Preview</p>

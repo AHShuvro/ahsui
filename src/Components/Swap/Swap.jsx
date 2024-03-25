@@ -19,7 +19,7 @@ const Swap = () => {
     return (
         <>
             
-            <p className='text-[#0008] font-medium pb-4'>Swap volume icons</p>
+            <p className='text-[#000] font-bold pb-2'>Swap volume icons</p>
 
             <div className='flex gap-4 p-2'>
                 <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("swapPriview1")}>Preview</p>
