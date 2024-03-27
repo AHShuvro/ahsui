@@ -1,26 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import HomePage1 from './Page/HomePage1.jsx';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './Page/MainPage.jsx';
+import Home1 from './Components/Home/Home1.jsx';
+import Accordion from './Components/Accordions/Accordion.jsx';
+import ModalPage from './Page/ModalPage.jsx';
+import ButtonPage from './Page/ButtonPage.jsx';
+import SwapPage from './Page/SwapPage.jsx';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainPage/>,
-  },
-  {
-    path: "/components",
-    element: <HomePage1/>,
-  },
-]);
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/components" element={<Home1 />}>
+          <Route path="accordion" element={<Accordion />} />
+          <Route path="modal" element={<ModalPage />} />
+          <Route path="button" element={<ButtonPage />} />
+          <Route path="swap" element={<SwapPage />} />
+        </Route>
+      </Routes>
+    </Router>
   </React.StrictMode>,
-)
+  document.getElementById('root')
+);
