@@ -41,7 +41,7 @@ const Header1 = () => {
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal px-1 text-[#FFFFFF]">
-                    <li><Link to={'/components'} className="font-medium text-base">Components</Link></li>
+                    <li><Link to={'/components/Accordion'} className="font-medium text-base">Components</Link></li>
                     <li><a className="font-medium text-base">Premium</a></li>
                 </ul>
             </div>
