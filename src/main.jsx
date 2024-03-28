@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './Page/MainPage.jsx';
-import Home1 from './Components/Home/Home1.jsx';
+import HomePage1 from './Page/HomePage1.jsx';
 import Accordion from './Components/Accordions/Accordion.jsx';
 import ModalPage from './Page/ModalPage.jsx';
 import ButtonPage from './Page/ButtonPage.jsx';
@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/components" element={<Home1 />}>
+        <Route path="/components" element={<HomePage1 />}>
           <Route path="accordion" element={<Accordion />} />
           <Route path="modal" element={<ModalPage />} />
           <Route path="button" element={<ButtonPage />} />
