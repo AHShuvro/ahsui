@@ -21,7 +21,7 @@ const Header1 = () => {
                 </div>
 
 
-                <Link to={'/'}><img className="h-[4rem]" src="./ahsui.png" alt="" /></Link>
+                <Link to={'/'}><img className="h-[4rem]" src="https://i.ibb.co/3Rg4Qtf/ahsui.png" alt="" /></Link>
 
 
             </div>
@@ -41,7 +41,7 @@ const Header1 = () => {
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal px-1 text-[#FFFFFF]">
-                    <li><Link to={'/components/Accordion'} className="font-medium text-base">Components</Link></li>
+                    <Link to={'/components/Accordion'}><li><a className="font-medium text-base">Components</a></li></Link>
                     <li><a className="font-medium text-base">Premium</a></li>
                 </ul>
             </div>
