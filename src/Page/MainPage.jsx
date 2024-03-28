@@ -10,7 +10,7 @@ const MainPage = () => {
                 <h3 className='text-base md:text-lg lg:text-xl xl:text-2xl font-medium mb-8 '>Discover {`Tailwind's`} Treasure Trove: A World of <span className='text-[#EF1E7E]'>Free</span>, <span className='text-[#EF1E7E]'>Versatile</span>, <br />and <span className='text-[#EF1E7E]'>Customizable</span> Components Awaits Your Exploration.</h3>
                 <div className='flex  gap-2'>
                     <Link to={'/components/Accordion'}><button className='text-base md:text-lg lg:text-xl text-white font-medium bg-[#EF1E7E] hover:bg-[#D4156A] px-6 md:px-10 lg:px-16 py-2 lg:py-4 rounded-full '>Get Start</button></Link>
-                    <Link to={'https://github.com/AHShuvro/ahsui'}><button className='text-base md:text-lg lg:text-xl text-black font-medium bg-gray-100 hover:bg-gray-300 px-6 md:px-10 lg:px-16 py-2 lg:py-4 rounded-full '>GitHub</button></Link>
+                    <Link to={'https://github.com/AHShuvro/ahsui'}><button className='text-base md:text-lg lg:text-xl text-black font-medium bg-gray-100 hover:bg-gray-300 px-6 md:px-10 lg:px-16 py-2 lg:py-4 rounded-full '>dfadfadfd</button></Link>
                 </div>
             </div>
         </>
