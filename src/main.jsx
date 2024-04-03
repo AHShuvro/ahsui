@@ -8,6 +8,7 @@ import Accordion from './Components/Accordions/Accordion.jsx';
 import ModalPage from './Page/ModalPage.jsx';
 import ButtonPage from './Page/ButtonPage.jsx';
 import SwapPage from './Page/SwapPage.jsx';
+import RatingPage from './Page/RatingPage.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
           <Route path="modal" element={<ModalPage />} />
           <Route path="button" element={<ButtonPage />} />
           <Route path="swap" element={<SwapPage />} />
+          <Route path="rating" element={<RatingPage />} />
         </Route>
       </Routes>
     </Router>

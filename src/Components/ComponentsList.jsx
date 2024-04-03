@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { components } from '../Data/AllData';
 
 
 const ComponentsList = () => {
-
-    const a = ['Accordion', 'Modal', 'Button', 'Swap', ];
-
     const [dorpDown, setDropDown] = useState(true)
 
     const handleDropdown = (e) => {
@@ -24,7 +22,7 @@ const ComponentsList = () => {
 
                 {
                     dorpDown ?
-                        a.sort().map((item, idx) => (
+                    components.sort().map((item, idx) => (
                             <Link key={idx} to={`/components/${item}`}><li className='text-[1rem] font-semibold py-1 px-4 hover:text-[#EF1E7E] hover:bg-[#ef1e7f1a] focus:text-white focus:bg-[#EF1E7E] rounded-2xl list-none cursor-pointer' tabIndex="0">{item}</li></Link>
                         ))
                         :
