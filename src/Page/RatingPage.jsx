@@ -1,5 +1,6 @@
 import Rating1 from "../Components/Rating/Rating1";
 import Rating2 from "../Components/Rating/Rating2";
+import Rating3 from "../Components/Rating/Rating3";
 
 const RatingPage = () => {
     return (
@@ -9,6 +10,7 @@ const RatingPage = () => {
             <div>
                 <Rating1 />
                 <Rating2 />
+                <Rating3 />
             </div>
         </>
     );
