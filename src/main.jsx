@@ -10,6 +10,7 @@ import ButtonPage from './Page/ButtonPage.jsx';
 import SwapPage from './Page/SwapPage.jsx';
 import RatingPage from './Page/RatingPage.jsx';
 import CarouselPage from './Page/CarouselPage.jsx';
+import FormPage from './Page/FormPage.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="swap" element={<SwapPage />} />
           <Route path="rating" element={<RatingPage />} />
           <Route path="carousel" element={<CarouselPage />} />
+          <Route path="form" element={<FormPage />} />
         </Route>
       </Routes>
     </Router>

@@ -32,7 +32,7 @@ const CarouselCodeContainer = () => {
                             <div className=" ease-linear duration-700 flex transform-gpu" style={{ transform: \`translateX(-\${ currentSlide * 100} %)\` }}>
                                 {
                                     carouselImages.map((slide, idx) => (
-                                        <img key={idx} src={slide} alt="" />
+                                        <img className=' object-cover bg-gray-200 min-w-full h-60sm:h-[24rem] md:h-[34rem]' key={idx} src={slide} alt="" />
                                     ))
                                 }
                             </div>
