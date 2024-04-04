@@ -13,8 +13,8 @@ const FormCodeContainer = () => {
             const Form1 = () => {
                 return (
                     <>
-                        <div className='bg-slate-200 flex justify-center items-center'>
-                            <div className="w-full max-w-md bg-[#ffffff] px-8 py-20 my-8 rounded-xl">
+                        <div className='bg-slate-200 flex justify-center items-center rounded-xl'>
+                            <div className="w-full max-w-md bg-[#ffffff] px-8 py-20 my-0 md:my-8 rounded-xl shadow-lg">
                                 <h3 className="mb-12 text-4xl font-bold text-center">Login</h3>
                                 <div className="flex flex-col gap-1 mb-4">
                                     <label htmlFor="username">Username</label>
@@ -43,7 +43,6 @@ const FormCodeContainer = () => {
                                 <p className="text-center text-sm text-gray-600 mt-6">Don't have an account?
                                     <span><a href="#" className="hover:underline"> Sign up</a></span>
                                 </p>
-
                             </div>
                         </div>
                     </>

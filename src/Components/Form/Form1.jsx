@@ -23,8 +23,8 @@ const Form1 = () => {
             </div>
 
             <div className={`mb-8 overflow-hidden ${activePreview === "buttonPriview" ? 'block' : 'hidden'}`}>
-                <div className='bg-slate-200 flex justify-center items-center'>
-                    <div className="w-full max-w-md bg-[#ffffff] px-8 py-20 my-8 rounded-xl">
+                <div className='bg-slate-200 flex justify-center items-center rounded-xl'>
+                    <div className="w-full max-w-md bg-[#ffffff] px-8 py-20 my-0 md:my-8 rounded-xl shadow-lg">
                         <h3 className="mb-12 text-4xl font-bold text-center">Login</h3>
                         <div className="flex flex-col gap-1 mb-4">
                             <label htmlFor="username">Username</label>
