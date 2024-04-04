@@ -19,17 +19,17 @@ const CarouselCodeContainer = () => {
                 const nextSlider = useCallback(() => setCurrentSlide((currentSlide) => currentSlide === carouselImages.length - 1 ? 0 : currentSlide + 1), [carouselImages.length]);
 
                 useEffect(() => {
-                    const intervalId = setInterval(() => {
+                    const interval = setInterval(() => {
                         nextSlider();
-                    }, 3000);
-                    return () => clearInterval(intervalId);
+                    }, 2500);
+                    return () => clearInterval(interval);
                 }, [nextSlider]);
 
 
                 return (
                     <>
                         <div className={\`flex justify- center mb-8 overflow - hidden' } \`}>
-                            <div className=" ease-linear duration-500 flex transform-gpu" style={{ transform: \`translateX(-\${ currentSlide * 100} %)\` }}>
+                            <div className=" ease-linear duration-700 flex transform-gpu" style={{ transform: \`translateX(-\${ currentSlide * 100} %)\` }}>
                                 {
                                     carouselImages.map((slide, idx) => (
                                         <img key={idx} src={slide} alt="" />

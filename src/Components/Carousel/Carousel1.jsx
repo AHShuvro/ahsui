@@ -1,5 +1,6 @@
 
 import { useCallback, useEffect, useState } from 'react';
+import CarouselCodeContainer from './CarouselCodeContainer';
 
 const Carousel1 = () => {
     const [activePreview, setActivePreview] = useState("buttonPriview");
@@ -17,10 +18,10 @@ const Carousel1 = () => {
 
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        const interval = setInterval(() => {
             nextSlider();
-        }, 3000);
-        return () => clearInterval(intervalId);
+        }, 2500);
+        return () => clearInterval(interval);
     }, [nextSlider]);
 
 
@@ -35,7 +36,7 @@ const Carousel1 = () => {
             </div>
 
             <div className={`flex justify-center mb-8 overflow-hidden ${activePreview === "buttonPriview" ? 'block' : 'hidden'}`}>
-                <div  className=" ease-linear duration-500 flex transform-gpu" style={{ transform: `translateX(-${currentSlide * 100}%)`}}>
+                <div  className=" ease-linear duration-700 flex transform-gpu" style={{ transform: `translateX(-${currentSlide * 100}%)`}}>
                     {
                         carouselImages.map((slide, idx) => (
                             <img key={idx} src={slide} alt="" />
@@ -44,9 +45,9 @@ const Carousel1 = () => {
                 </div>
             </div>
 
-            {/* <div className={`${activePreview === "buttonJsx1" ? 'block' : 'hidden'}`}>
-                <ButtonCodeContainer />
-            </div> */}
+            <div className={`${activePreview === "buttonJsx1" ? 'block' : 'hidden'}`}>
+                <CarouselCodeContainer />
+            </div>
 
 
         </>
