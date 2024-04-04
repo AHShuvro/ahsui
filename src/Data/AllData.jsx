@@ -1,3 +1,3 @@
-const components = ['Accordion', 'Modal', 'Button', 'Swap', 'Rating' ];
+const components = ['Accordion', 'Modal', 'Button', 'Swap', 'Rating', 'Carousel' ];
 
 export {components,};

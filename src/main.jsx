@@ -9,6 +9,7 @@ import ModalPage from './Page/ModalPage.jsx';
 import ButtonPage from './Page/ButtonPage.jsx';
 import SwapPage from './Page/SwapPage.jsx';
 import RatingPage from './Page/RatingPage.jsx';
+import CarouselPage from './Page/CarouselPage.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.render(
           <Route path="button" element={<ButtonPage />} />
           <Route path="swap" element={<SwapPage />} />
           <Route path="rating" element={<RatingPage />} />
+          <Route path="carousel" element={<CarouselPage />} />
         </Route>
       </Routes>
     </Router>

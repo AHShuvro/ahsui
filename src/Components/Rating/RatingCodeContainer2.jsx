@@ -18,7 +18,7 @@ const RatingCodeContainer2 = () => {
         
             return (
                 <>
-                    <div className={\`flex flex-col gap-2 border border-stone-300 rounded-2xl p-6 mb-8 \${activePreview === "buttonPriview" ? 'block' : 'hidden'}\`}>
+                    <div className={\`flex flex-col gap-2 border border-stone-300 rounded-2xl p-6 mb-8\`}>
                         <div className="flex">
                             {
                                 [...Array(5)].map((star, index) => {
