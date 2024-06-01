@@ -1,7 +1,7 @@
 
 import AceEditor from 'react-ace';
-import 'ace-builds/src-noconflict/theme-twilight';
-import 'ace-builds/src-noconflict/mode-javascript';
+import 'ace-builds/src-noconflict/mode-jsx';
+import 'ace-builds/src-noconflict/theme-cobalt';
 
 
 const CarouselCodeContainer = () => {
@@ -14,7 +14,12 @@ const CarouselCodeContainer = () => {
 
                 const [currentSlide, setCurrentSlide] = useState(0)
 
-                const carouselImages = ['https://source.unsplash.com/1200x540/?moon', 'https://source.unsplash.com/1200x540/?bird', 'https://source.unsplash.com/1200x540/?river', 'https://source.unsplash.com/1200x540/?rain'];
+                const carouselImages = [
+                    'https://source.unsplash.com/1200x540/?moon', 
+                    'https://source.unsplash.com/1200x540/?bird', 
+                    'https://source.unsplash.com/1200x540/?river', 
+                    'https://source.unsplash.com/1200x540/?rain'
+                ];
 
                 const nextSlider = useCallback(() => setCurrentSlide((currentSlide) => currentSlide === carouselImages.length - 1 ? 0 : currentSlide + 1), [carouselImages.length]);
 
@@ -48,8 +53,8 @@ const CarouselCodeContainer = () => {
 return (
     <div>
         <AceEditor
-            mode="javascript"
-            theme="twilight"
+            mode="jsx"
+            theme="cobalt"
             value={code.a}
             onChange={(newValue) => console.log('Change', newValue)}
             name="code-editor"

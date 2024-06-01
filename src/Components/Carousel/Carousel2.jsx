@@ -1,37 +1,35 @@
-
 import { useCallback, useEffect, useState } from 'react';
 import CarouselCodeContainer from './CarouselCodeContainer';
+import CarouselCodeContainer2 from './CarouselCodeContainer2';
 
-const Carousel1 = () => {
+const Carousel2 = () => {
     const [activePreview, setActivePreview] = useState("buttonPriview");
 
     const handlePreview = (e) => {
         setActivePreview(e);
     };
 
-    const [currentSlide, setCurrentSlide] = useState(0)
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const carouselImages = [
-        'https://source.unsplash.com/1200x540/?moon',
-        'https://source.unsplash.com/1200x540/?bird',
-        'https://source.unsplash.com/1200x540/?river',
-        'https://source.unsplash.com/1200x540/?rain'
+        'https://source.unsplash.com/1200x540/?hill',
+        'https://source.unsplash.com/1200x540/?sea',
+        'https://source.unsplash.com/1200x540/?waterfall',
+        'https://source.unsplash.com/1200x540/?smook'
     ];
 
+    const prevSlider = () => setCurrentSlide((currentSlide) => currentSlide === 0 ? carouselImages.length - 1 : currentSlide - 1);
     const nextSlider = useCallback(() => setCurrentSlide((currentSlide) => currentSlide === carouselImages.length - 1 ? 0 : currentSlide + 1), [carouselImages.length]);
-
 
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlider();
-        }, 2500);
+        }, 4000);
         return () => clearInterval(interval);
     }, [nextSlider]);
 
-
     return (
         <div>
-
             <p className='text-[#000] font-bold pb-2'>Carousel with full width items</p>
 
             <div className='flex gap-4 p-2'>
@@ -39,23 +37,20 @@ const Carousel1 = () => {
                 <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("buttonJsx1")}>React</p>
             </div>
 
-            <div className={`flex justify-center mb-8 overflow-hidden ${activePreview === "buttonPriview" ? 'block' : 'hidden'}`}>
-                <div className=" ease-linear duration-700 flex transform-gpu" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-                    {
-                        carouselImages.map((slide, idx) => (
-                            <img className=' object-cover bg-gray-200 min-w-full h-60sm:h-[24rem] md:h-[34rem]' key={idx} src={slide} alt="" />
-                        ))
-                    }
-                </div>
+            <div className={`flex justify-center mb-8 overflow-hidden relative h-60 sm:h-[24rem] md:h-[34rem] ${activePreview === "buttonPriview" ? 'block' : 'hidden'}`}>
+                {
+                    carouselImages.map((slide, idx) => (
+                        <img className={`absolute top-0 left-0 w-full min-w-full h-60sm:h-[24rem] md:h-[34rem] object-cover  ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`} key={idx} src={slide} alt="" style={{ transition: 'opacity 2000ms ease-in-out'}}
+                        />
+                    ))
+                }
             </div>
 
             <div className={`${activePreview === "buttonJsx1" ? 'block' : 'hidden'}`}>
-                <CarouselCodeContainer />
+                <CarouselCodeContainer2 />
             </div>
-
-
         </div>
     );
 };
 
-export default Carousel1;
+export default Carousel2;

@@ -1,0 +1,41 @@
+.App {
+    text-align: center;
+}
+
+.terminal {
+    background-color: #000;
+    color: #fff;
+    height: 70vh;
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.output {
+    height: 90%;
+    overflow-y: auto;
+}
+
+form {
+    margin-top: 10px;
+}
+
+span {
+    color: green;
+    margin-right: 5px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input:focus {
+    outline: none;
+}

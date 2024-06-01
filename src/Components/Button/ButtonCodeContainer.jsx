@@ -1,7 +1,7 @@
 
 import AceEditor from 'react-ace';
-import 'ace-builds/src-noconflict/theme-twilight';
-import 'ace-builds/src-noconflict/mode-javascript';
+import 'ace-builds/src-noconflict/mode-jsx';
+import 'ace-builds/src-noconflict/theme-cobalt';
 
 
 const ButtonCodeContainer = () => {
@@ -28,8 +28,8 @@ const ButtonCodeContainer = () => {
     return (
         <div>
             <AceEditor
-                mode="javascript"
-                theme="twilight" 
+                mode="jsx"
+                theme="cobalt" 
                 value={code.a}
                 onChange={(newValue) => console.log('Change', newValue)} 
                 name="code-editor"
