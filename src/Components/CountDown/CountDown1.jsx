@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import CarouselCodeContainer2 from '../Carousel/CarouselCodeContainer2';
+import CountDownCodeContainer1 from './CountDownCodeContainer1';
 
 const CountDown = () => {
     const [activePreview, setActivePreview] = useState("buttonPriview");
@@ -49,7 +49,7 @@ const CountDown = () => {
             </div>
 
             <div className={`${activePreview === "buttonJsx1" ? 'block' : 'hidden'}`}>
-                <CarouselCodeContainer2 />
+                <CountDownCodeContainer1 />
             </div>
         </div>
     );
