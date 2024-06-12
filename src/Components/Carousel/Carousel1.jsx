@@ -12,10 +12,11 @@ const Carousel1 = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const carouselImages = [
-        'https://source.unsplash.com/1200x540/?moon',
-        'https://source.unsplash.com/1200x540/?bird',
-        'https://source.unsplash.com/1200x540/?river',
-        'https://source.unsplash.com/1200x540/?rain'
+        'https://i.ibb.co/Zm6CqNz/wp6304582-werewolf-minimalist-wallpapers.png',
+        'https://i.ibb.co/Zm6CqNz/wp6304582-werewolf-minimalist-wallpapers.png',
+        'https://i.ibb.co/Zm6CqNz/wp6304582-werewolf-minimalist-wallpapers.png',
+        'https://i.ibb.co/Zm6CqNz/wp6304582-werewolf-minimalist-wallpapers.png',
+        'https://i.ibb.co/Zm6CqNz/wp6304582-werewolf-minimalist-wallpapers.png',
     ];
 
     const nextSlider = useCallback(() => setCurrentSlide((currentSlide) => currentSlide === carouselImages.length - 1 ? 0 : currentSlide + 1), [carouselImages.length]);
