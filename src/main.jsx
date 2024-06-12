@@ -10,6 +10,7 @@ import SwapPage from './Page/SwapPage.jsx';
 import RatingPage from './Page/RatingPage.jsx';
 import CarouselPage from './Page/CarouselPage.jsx';
 import FormPage from './Page/FormPage.jsx';
+import CountDownPage from './Page/CountDownPage.jsx';
 import { createRoot } from 'react-dom/client';
 import A from './Components/Swap/A.jsx';
 
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="rating" element={<RatingPage />} />
           <Route path="carousel" element={<CarouselPage />} />
           <Route path="form" element={<FormPage />} />
+          <Route path="countdown" element={<CountDownPage />} />
           <Route path="a" element={<A />} />
         </Route>
       </Routes>

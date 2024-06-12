@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react';
-import CarouselCodeContainer from './CarouselCodeContainer';
 import CarouselCodeContainer2 from './CarouselCodeContainer2';
 
 const Carousel2 = () => {
@@ -19,7 +18,6 @@ const Carousel2 = () => {
         'https://i.ibb.co/Zm6CqNz/wp6304582-werewolf-minimalist-wallpapers.png',
     ];
 
-    const prevSlider = () => setCurrentSlide((currentSlide) => currentSlide === 0 ? carouselImages.length - 1 : currentSlide - 1);
     const nextSlider = useCallback(() => setCurrentSlide((currentSlide) => currentSlide === carouselImages.length - 1 ? 0 : currentSlide + 1), [carouselImages.length]);
 
     useEffect(() => {
