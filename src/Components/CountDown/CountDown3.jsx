@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import CountDownCodeContainer1 from './CountDownCodeContainer1';
+import CountDownCodeContainer3 from './CountDownCodeContainer3';
 
-const CountDown1 = () => {
+const CountDown3 = () => {
     const [activePreview, setActivePreview] = useState("buttonPriview");
-    const [time, setTime] = useState({ hrs: 0, min: 0, sec: 0 });
+    const [time, setTime] = useState( { sec : 0 } );
 
     const handlePreview = (preview) => {
         setActivePreview(preview);
@@ -11,22 +11,12 @@ const CountDown1 = () => {
 
     const updateTime = () => {
         setTime(prevTime => {
-            let { hrs, min, sec } = prevTime;
+            let { sec } = prevTime;
             sec++;
             if (sec === 60) {
                 sec = 0;
-                min++;
             }
-            if (min === 60) {
-                min = 0;
-                hrs++;
-            }
-            if (hrs === 24) {
-                sec = 0;
-                min = 0;
-                hrs = 0;
-            }
-            return { hrs, min, sec };
+            return { sec };
         });
     };
 
@@ -37,7 +27,7 @@ const CountDown1 = () => {
 
     return (
         <div>
-            <p className='text-[#000] font-bold pb-2'>Reset after 24 hours.</p>
+            <p className='text-[#000] font-bold pb-2'>Reset after 60 second.</p>
 
             <div className='flex gap-4 p-2'>
                 <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("buttonPriview")}>Preview</p>
@@ -45,14 +35,16 @@ const CountDown1 = () => {
             </div>
 
             <div className={`flex flex-col items-center gap-2 border border-stone-300 rounded-2xl p-6 mb-8 ${activePreview === "buttonPriview" ? 'block' : 'hidden'}`}>
-                <p className='text-4xl text-[#777777]'>{time.hrs}:{time.min}:{time.sec}</p>
+                <p className='text-4xl text-[#777777]'>{time.sec}</p>
             </div>
 
             <div className={`${activePreview === "buttonJsx1" ? 'block' : 'hidden'}`}>
-                <CountDownCodeContainer1 />
+                <CountDownCodeContainer3 />
             </div>
         </div>
     );
 };
 
-export default CountDown1;
+export default CountDown3;
+
+

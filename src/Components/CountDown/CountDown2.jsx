@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import CountDownCodeContainer1 from './CountDownCodeContainer1';
+import CountDownCodeContainer2 from './CountDownCodeContainer2';
 
-const CountDown1 = () => {
+const CountDown2 = () => {
     const [activePreview, setActivePreview] = useState("buttonPriview");
-    const [time, setTime] = useState({ hrs: 0, min: 0, sec: 0 });
+    const [time, setTime] = useState({ hrs: 23, min: 59, sec: 59 });
 
     const handlePreview = (preview) => {
         setActivePreview(preview);
@@ -12,19 +12,19 @@ const CountDown1 = () => {
     const updateTime = () => {
         setTime(prevTime => {
             let { hrs, min, sec } = prevTime;
-            sec++;
-            if (sec === 60) {
-                sec = 0;
-                min++;
+            sec--;
+            if (sec < 0) {
+                sec = 59;
+                min--;
             }
-            if (min === 60) {
-                min = 0;
-                hrs++;
+            if (min < 0) {
+                min = 59;
+                hrs--;
             }
-            if (hrs === 24) {
-                sec = 0;
-                min = 0;
-                hrs = 0;
+            if (hrs < 0) {
+                sec = 59;
+                min = 59;
+                hrs = 23;
             }
             return { hrs, min, sec };
         });
@@ -37,7 +37,7 @@ const CountDown1 = () => {
 
     return (
         <div>
-            <p className='text-[#000] font-bold pb-2'>Reset after 24 hours.</p>
+            <p className='text-[#000] font-bold pb-2'>Reverse Count : Reset after 24 hours.</p>
 
             <div className='flex gap-4 p-2'>
                 <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("buttonPriview")}>Preview</p>
@@ -49,10 +49,11 @@ const CountDown1 = () => {
             </div>
 
             <div className={`${activePreview === "buttonJsx1" ? 'block' : 'hidden'}`}>
-                <CountDownCodeContainer1 />
+                <CountDownCodeContainer2 />
             </div>
         </div>
     );
 };
 
-export default CountDown1;
+export default CountDown2;
+
