@@ -1,5 +1,6 @@
 import Carousel1 from '../Components/Carousel/Carousel1';
 import Carousel2 from '../Components/Carousel/Carousel2';
+import { Carousel3 } from '../Components/Carousel/Carousel3';
 
 const CarouselPage = () => {
     return (
@@ -9,6 +10,7 @@ const CarouselPage = () => {
             <div className='flex flex-col gap-1 sm:gap-3 xl:gap-8'>
                 <Carousel1 />
                 <Carousel2 />
+                <Carousel3 />
 
             </div>
         </>
