@@ -1,11 +1,20 @@
-import { useState, useRef } from "react";
-import CarouselCodeContainer3 from "./CarouselCodeContainer3";
+
+import AceEditor from 'react-ace';
+import 'ace-builds/src-noconflict/mode-jsx';
+import 'ace-builds/src-noconflict/theme-cobalt';
+
+
+const CarouselCodeContainer3 = () => {
+    const code = {
+        a: `
+        
+        import { useState, useRef } from "react";
 
 export const Carousel3 = () => {
 
     const hoverStyle = {
-        cursor: `url(https://i.ibb.co/n754Ssx/icon-move-black.png) 16 16, auto`,
-        backgroundColor: '#FFFFFF'
+        cursor: \`url(https://i.ibb.co/n754Ssx/icon-move-black.png) 16 16, auto\`,
+            backgroundColor: '#FFFFFF'
     };
 
     const [currentSlider, setCurrentSlider] = useState(0);
@@ -41,24 +50,11 @@ export const Carousel3 = () => {
         }
     };
 
-    const [activePreview, setActivePreview] = useState("buttonPriview");
-
-    const handlePreview = (e) => {
-        setActivePreview(e);
-    };
-
     return (
 
         <div>
 
-            <p className='text-[#000] font-bold pb-2'>Carousel with fades.</p>
-
-            <div className='flex gap-4 p-2'>
-                <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("buttonPriview")}>Preview</p>
-                <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("buttonJsx1")}>React</p>
-            </div>
-
-            <div  className={`flex justify-center mb-8 overflow-hidden relative h-60 sm:h-[24rem] md:h-[34rem] select-none ${activePreview === "buttonPriview" ? 'block' : 'hidden'}`}
+            <div className={\`flex justify-center mb-8 overflow-hidden relative h-60 sm:h-[24rem] md:h-[34rem] select-none \`}
                 onMouseDown={handleMouseDown}
                 onMouseUp={handleMouseUp}
                 onMouseMove={handleMouseMove}
@@ -72,9 +68,29 @@ export const Carousel3 = () => {
                     </div>
                 </>
             </div>
-            <div className={`${activePreview === "buttonJsx1" ? 'block' : 'hidden'}`}>
-                <CarouselCodeContainer3 />
-            </div>
         </div>
     );
 };
+
+
+`
+    }
+
+    return (
+        <div>
+            <AceEditor
+                mode="jsx"
+                theme="cobalt"
+                value={code.a}
+                onChange={(newValue) => console.log('Change', newValue)}
+                name="code-editor"
+                fontSize={14}
+                width="100%"
+                height="500px"
+                editorProps={{ $blockScrolling: true }}
+            />
+        </div>
+    );
+};
+
+export default CarouselCodeContainer3;

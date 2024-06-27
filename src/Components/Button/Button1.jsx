@@ -28,15 +28,6 @@ const Button1 = () => {
                     <button className='relative text-xl text-[#EF1E7E] hover:text-white font-medium hover:bg-[#EF1E7E] w-32 py-2 border-2 border-[#EF1E7E] rounded-sm transition duration-500'>Get Start</button>
 
                     <button className="relative py-2 w-32 origin-top transform border-2 border-[#EF1E7E] text-xl text-[#EF1E7E] font-medium before:absolute before:top-0 before:block before:h-0 before:w-full hover:before:bg-[#EF1E7E] hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:text-white hover:before:h-full before:duration-500">Get Start</button>
-
-                    
-
-
-
-
-
-
-
                 </div>
             </div>
 
