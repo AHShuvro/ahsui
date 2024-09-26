@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import CodeContainer from './CodeContainer';
 import AccordionCodeContainer4 from './AccordionCodeContainer4';
 
 const Accordion4 = () => {
@@ -46,8 +45,10 @@ const Accordion4 = () => {
                 <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("acordionJsx")}>React</p>
             </div>
 
-            <div className={`flex gap-2 border border-stone-300 rounded-2xl p-4 ${activePreview === "acordionPriview" ? 'block' : 'hidden'}`}>
-                <div className="w-1/3 bg-gray-100 p-4 rounded-l-lg">
+
+
+            <div className={`flex md:flex-row flex-col border border-stone-300 rounded-2xl p-4 mb-8 ${activePreview === "acordionPriview" ? 'block' : 'hidden'}`}>
+                <div className="w-full md:w-1/3 bg-gray-100 p-4 rounded-l-lg">
                     {tabs.map((tab) => (
                         <div
                             key={tab.id}
@@ -60,7 +61,7 @@ const Accordion4 = () => {
                     ))}
                 </div>
 
-                <div className="w-2/3 bg-white p-6 rounded-r-lg">
+                <div className="w-full md:w-2/3 bg-white p-6 rounded-r-lg">
                     {tabs.map((tab) => (
                         <div
                             key={tab.id}

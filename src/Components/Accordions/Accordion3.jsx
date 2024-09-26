@@ -45,7 +45,7 @@ const Accordion3 = () => {
                 <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("acordionJsx1")}>React</p>
             </div>
 
-            <div className={`flex flex-col gap-2 border border-stone-300 rounded-2xl p-4 ${activePreview === "acordionPriview1" ? 'block' : 'hidden'}`}>
+            <div className={`flex border border-stone-300 rounded-2xl p-4 mb-8 ${activePreview === "acordionPriview1" ? 'block' : 'hidden'}`}>
                 <div className="flex flex-col gap-4 p-6 max-w-xl mx-auto">
                     {tabs.map((tab) => (
                         <div
