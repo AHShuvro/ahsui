@@ -5,10 +5,6 @@ import ComponentsList from "../ComponentsList";
 
 const Header1 = () => {
     return (
-
-
-
-
         <div className="navbar bg-[#EF1E7E] h-[4.5rem] sticky top-0 z-10">
             <div className="navbar-start">
                 <div className="dropdown">

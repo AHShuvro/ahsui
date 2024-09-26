@@ -17,8 +17,7 @@ const Accordion = () => {
 
     return (
         <>
-            <h3 className='text-4xl font-bold pb-4'>Accordion</h3>
-            <p className='text-[#0008] font-medium pb-4'>Accordion components facilitate displaying and concealing content, ensuring that only one item remains open at any given moment.</p>
+            <p className='text-[#000] font-bold pb-2'>Simple accordion</p>
 
             <div className='flex gap-4 p-2'>
                 <p className='cursor-pointer px-2 py-1 hover:text-white focus:text-white bg-[#ef1e7f1a] hover:bg-[#EF1E7E] focus:bg-[#EF1E7E] rounded-md' tabIndex="0" onClick={() => handlePreview("acordionPriview1")}>Preview</p>
