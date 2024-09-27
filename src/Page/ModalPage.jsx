@@ -1,4 +1,5 @@
 import Modal from "../Components/Modal/Modal";
+import Modal2 from "../Components/Modal/Modal2";
 
 const ModalPage = () => {
     return (
@@ -7,6 +8,7 @@ const ModalPage = () => {
             <p className='text-[#0008] font-medium pb-8'>A modal is a pop-up window that overlays the current page for focused interactions.</p>
             <div>
                 <Modal/>
+                <Modal2 />
             </div>
         </>
     );
