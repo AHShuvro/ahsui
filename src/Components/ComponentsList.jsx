@@ -28,7 +28,10 @@ const ComponentsList = () => {
                     :
                     <div></div>
             }
-            <div onClick={() => handleDropdown(2)} className='flex items-center justify-between text-xl cursor-pointer my-2'>
+
+
+
+            {/* <div onClick={() => handleDropdown(2)} className='flex items-center justify-between text-xl cursor-pointer my-2'>
                 <button className=' font-bold px-2 list-none' tabIndex="0">Components</button>
                 <MdKeyboardArrowDown />
             </div>
@@ -39,7 +42,7 @@ const ComponentsList = () => {
                     ))
                     :
                     <div></div>
-            }
+            } */}
 
         </>
     );
